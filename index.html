@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRI - Terapia de Reintegração Implícita</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <section id="inicio" class="screen active">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <span>TRI</span>
+                </div>
+            </div>
+            <h1>Terapia de Reintegração Implícita</h1>
+            <p class="subtitle">Uma nova perspectiva para entender seus padrões de comportamento</p>
+            <button class="btn-primary" onclick="navegarPara('introducao')">
+                Começar a Jornada
+                <span class="arrow">→</span>
+            </button>
+        </div>
+        <div class="wave-bottom"></div>
+    </section>
+
+    <!-- Introdução -->
+    <section id="introducao" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 14%"></div>
+            </div>
+            <h2>O que você precisa saber</h2>
+            <div class="card">
+                <div class="icon">💭</div>
+                <p>Muitas pessoas chegam à terapia acreditando que todos os seus problemas têm origem no passado...</p>
+            </div>
+            <div class="card highlight">
+                <div class="icon">✨</div>
+                <p><strong>A TRI oferece uma perspectiva diferente:</strong> não é sobre buscar causas, não é sobre trabalhar emoções isoladamente, e não é sobre dizer o que você deve fazer.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🎯</div>
+                <p>A TRI ajuda você a ter uma <strong>visão geral</strong> do que está fazendo na vida, permitindo novos comportamentos de forma natural.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('inicio')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('cargas')">Continuar →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cargas Afetivas -->
+    <section id="cargas" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 28%"></div>
+            </div>
+            <h2>Cargas Afetivas</h2>
+            <div class="visual-container">
+                <div class="timeline">
+                    <div class="timeline-point" data-age="0">
+                        <span class="age">0</span>
+                        <div class="charges charge-1"></div>
+                    </div>
+                    <div class="timeline-point" data-age="10">
+                        <span class="age">10</span>
+                        <div class="charges charge-2"></div>
+                    </div>
+                    <div class="timeline-point" data-age="20">
+                        <span class="age">20</span>
+                        <div class="charges charge-3"></div>
+                    </div>
+                    <div class="timeline-point" data-age="30">
+                        <span class="age">30</span>
+                        <div class="charges charge-4"></div>
+                    </div>
+                    <div class="timeline-line"></div>
+                </div>
+            </div>
+            <div class="explanation-box">
+                <p>Ao longo da vida, desde o nascimento, vamos acumulando <strong>cargas afetivas</strong> — experiências, aprendizados, memórias emocionais.</p>
+                <p>Essas cargas, pela proximidade entre si, vão se <strong>juntando e criando um direcionamento</strong> para nossas escolhas e comportamentos.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('introducao')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('conflito')">Continuar →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conflito e Cisalhamento -->
+    <section id="conflito" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 42%"></div>
+            </div>
+            <h2>O Conflito</h2>
+            <div class="conflict-visual">
+                <div class="force force-left">
+                    <span>Cargas antigas</span>
+                    <div class="arrows-left">
+                        <span>→</span><span>→</span><span>→</span>
+                    </div>
+                </div>
+                <div class="tension-point">
+                    <div class="explosion">💥</div>
+                    <span>Cisalhamento</span>
+                </div>
+                <div class="force force-right">
+                    <div class="arrows-right">
+                        <span>←</span><span>←</span><span>←</span>
+                    </div>
+                    <span>Novas cargas</span>
+                </div>
+            </div>
+            <div class="explanation-box">
+                <p>Em certos momentos da vida — como casar, ter filhos, querer mudar de carreira — <strong>novas cargas afetivas</strong> surgem.</p>
+                <p>Quando essas novas cargas entram em <strong>conflito</strong> com as antigas, acontece o que chamamos de <strong>cisalhamento</strong>.</p>
+                <p class="highlight-text">Esse cisalhamento gera <strong>tensão</strong>, que sentimos como desconforto ou dor.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('cargas')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('evitativo')">Continuar →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comportamento Evitativo -->
+    <section id="evitativo" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 56%"></div>
+            </div>
+            <h2>Comportamento Evitativo</h2>
+            <div class="evitativo-visual">
+                <div class="pain-icon">😣</div>
+                <div class="arrow-down">↓</div>
+                <div class="avoidance-box">
+                    <span>Comportamento Evitativo</span>
+                    <p class="small-text">(tentativa de aliviar a tensão)</p>
+                </div>
+            </div>
+            <div class="explanation-box">
+                <p>Como seres humanos, <strong>não gostamos de dor e desconforto</strong>.</p>
+                <p>Para aliviar a tensão do cisalhamento, criamos um movimento oposto — o <strong>comportamento evitativo</strong>.</p>
+                <p>É como uma "solução temporária" que usamos para não sentir aquele desconforto.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('conflito')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('ciclo')">Continuar →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Ciclo -->
+    <section id="ciclo" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
+            <h2>O Ciclo das Tensões</h2>
+            <div class="cycle-visual">
+                <div class="cycle-item">
+                    <div class="tension-badge">T1</div>
+                    <span>Tensão 1</span>
+                </div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-item evit">
+                    <span>Evitativo 1</span>
+                </div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-item">
+                    <div class="tension-badge">T2</div>
+                    <span>Tensão 2</span>
+                </div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-item evit">
+                    <span>Evitativo 2</span>
+                </div>
+                <div class="cycle-arrow">→</div>
+                <div class="cycle-item">
+                    <div class="tension-badge">T3</div>
+                    <span>Tensão 3</span>
+                </div>
+                <div class="cycle-dots">...</div>
+            </div>
+            <div class="explanation-box">
+                <p>O problema é que o comportamento evitativo <strong>não resolve a tensão original</strong>.</p>
+                <p>Ele apenas alivia temporariamente, mas acaba <strong>gerando novas tensões</strong>, que por sua vez geram novos comportamentos evitativos.</p>
+                <p class="highlight-text">É assim que se forma um <strong>ciclo</strong> de tensões acumuladas.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('evitativo')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('solucao')">Continuar →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- A Solução TRI -->
+    <section id="solucao" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+            </div>
+            <h2>A Proposta da TRI</h2>
+            <div class="solution-visual">
+                <div class="eye-icon">👁️</div>
+                <h3>Visão Geral</h3>
+            </div>
+            <div class="tri-cards">
+                <div class="tri-card">
+                    <div class="cross">✗</div>
+                    <p>Não é trabalhar com <strong>causa</strong></p>
+                </div>
+                <div class="tri-card">
+                    <div class="cross">✗</div>
+                    <p>Não é trabalhar com <strong>emoção</strong></p>
+                </div>
+                <div class="tri-card">
+                    <div class="cross">✗</div>
+                    <p>Não é ensinar o que <strong>deve ser feito</strong></p>
+                </div>
+                <div class="tri-card success">
+                    <div class="check">✓</div>
+                    <p>É ajudar você a ter uma <strong>visão geral</strong> do que está fazendo na vida</p>
+                </div>
+            </div>
+            <div class="explanation-box">
+                <p>Com essa visão ampliada, você naturalmente encontra espaço para <strong>novos comportamentos</strong>, sem precisar de instruções ou fórmulas prontas.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('ciclo')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('infografico')">Ver Infográfico →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infográfico -->
+    <section id="infografico" class="screen">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+            </div>
+            <h2>Visão Completa do Processo</h2>
+            <div class="infografico-container">
+                <img src="Infográfico.png" alt="Infográfico TRI - Terapia de Reintegração Implícita" class="infografico-img" onclick="abrirModal(this.src)">
+                <p class="tap-hint">Toque na imagem para ampliar</p>
+            </div>
+            <div class="final-message">
+                <p>A TRI oferece um caminho para você compreender seus padrões e encontrar novas possibilidades.</p>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="navegarPara('solucao')">← Voltar</button>
+                <button class="btn-primary" onclick="navegarPara('contato')">Próximo Passo →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato / CTA -->
+    <section id="contato" class="screen">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">🌱</div>
+                <h2>Pronto para começar sua jornada?</h2>
+                <p>A Terapia de Reintegração Implícita pode ajudar você a ter uma nova perspectiva sobre sua vida.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-cta whatsapp" id="btnWhatsapp">
+                        <span class="icon">📱</span>
+                        Agendar Consulta
+                    </a>
+                    <button class="btn-secondary" onclick="navegarPara('inicio')">
+                        Rever Apresentação
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imagem ampliada -->
+    <div id="modal" class="modal" onclick="fecharModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav class="nav-menu" id="navMenu">
+        <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-list">
+            <li onclick="navegarPara('inicio')">Início</li>
+            <li onclick="navegarPara('introducao')">Introdução</li>
+            <li onclick="navegarPara('cargas')">Cargas Afetivas</li>
+            <li onclick="navegarPara('conflito')">Cisalhamento</li>
+            <li onclick="navegarPara('evitativo')">Comportamento Evitativo</li>
+            <li onclick="navegarPara('ciclo')">Ciclo das Tensões</li>
+            <li onclick="navegarPara('solucao')">Proposta TRI</li>
+            <li onclick="navegarPara('infografico')">Infográfico</li>
+            <li onclick="navegarPara('contato')">Contato</li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
