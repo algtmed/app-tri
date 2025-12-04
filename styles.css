@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #09335f 0%, #062647 100%);
     min-height: 100vh;
     color: #333;
     overflow-x: hidden;
@@ -64,7 +64,7 @@ body {
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #4a7c9b, #3d6a85);
     border-radius: 3px;
     transition: width 0.5s ease;
 }
@@ -77,7 +77,7 @@ body {
 }
 
 #inicio h1 {
-    color: white;
+    color: #537db6;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 15px;
@@ -85,7 +85,7 @@ body {
 }
 
 #inicio .subtitle {
-    color: rgba(255, 255, 255, 0.9);
+    color: #537db6;
     font-size: 1.1rem;
     margin-bottom: 40px;
     line-height: 1.6;
@@ -93,6 +93,12 @@ body {
 
 .logo-container {
     margin-bottom: 30px;
+}
+
+.emblema-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
 }
 
 .logo-circle {
@@ -110,7 +116,7 @@ body {
 .logo-circle span {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #4a7c9b, #3d6a85);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -118,41 +124,90 @@ body {
 
 /* Botões */
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4a7c9b 0%, #3d6a85 100%);
     color: white;
     border: none;
-    padding: 16px 32px;
-    border-radius: 50px;
+    padding: 18px 36px;
+    border-radius: 16px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(74, 124, 155, 0.35),
+                0 8px 32px rgba(74, 124, 155, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(74, 124, 155, 0.5),
+                0 12px 40px rgba(74, 124, 155, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
 #inicio .btn-primary {
-    background: white;
-    color: #667eea;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.35),
+                0 8px 32px rgba(139, 92, 246, 0.2);
 }
 
 #inicio .btn-primary:hover {
-    background: #f8f9ff;
+    background: linear-gradient(135deg, #9d74f7 0%, #8b5cf6 100%);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5),
+                0 12px 40px rgba(139, 92, 246, 0.3);
+}
+
+/* Logo do usuário na tela inicial */
+.user-logo-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-logo {
+    max-width: 320px;
+    max-height: 140px;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.user-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #667eea;
-    border: 2px solid #667eea;
+    color: #4a7c9b;
+    border: 2px solid #4a7c9b;
     padding: 14px 28px;
-    border-radius: 50px;
+    border-radius: 16px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -160,7 +215,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: #667eea;
+    background: #4a7c9b;
     color: white;
 }
 
@@ -193,8 +248,8 @@ body {
 }
 
 .card.highlight {
-    background: linear-gradient(135deg, #667eea15, #764ba215);
-    border: 2px solid #667eea30;
+    background: linear-gradient(135deg, #4a7c9b15, #3d6a8515);
+    border: 2px solid #4a7c9b30;
 }
 
 .card .icon {
@@ -214,7 +269,7 @@ h2 {
     color: #333;
     margin-bottom: 25px;
     text-align: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #4a7c9b, #3d6a85);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -239,7 +294,7 @@ h2 {
     left: 10px;
     right: 10px;
     height: 3px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #4a7c9b, #3d6a85);
     border-radius: 2px;
 }
 
@@ -252,7 +307,7 @@ h2 {
 }
 
 .timeline-point .age {
-    background: #667eea;
+    background: #4a7c9b;
     color: white;
     width: 30px;
     height: 30px;
@@ -289,7 +344,7 @@ h2 {
 
 .charges::before {
     width: 100%;
-    background: linear-gradient(to top, #667eea, #764ba2);
+    background: linear-gradient(to top, #4a7c9b, #3d6a85);
     border-radius: 8px 8px 0 0;
     animation: growUp 1s ease-out;
 }
@@ -318,7 +373,7 @@ h2 {
 }
 
 .explanation-box .highlight-text {
-    color: #667eea;
+    color: #4a7c9b;
     font-weight: 500;
 }
 
@@ -350,7 +405,7 @@ h2 {
 
 .arrows-left span, .arrows-right span {
     font-size: 1.5rem;
-    color: #667eea;
+    color: #4a7c9b;
     animation: pulse 1s infinite;
 }
 
@@ -385,7 +440,7 @@ h2 {
 .tension-point span {
     display: block;
     font-size: 0.8rem;
-    color: #764ba2;
+    color: #3d6a85;
     font-weight: 600;
     margin-top: 5px;
 }
@@ -408,7 +463,7 @@ h2 {
 
 .arrow-down {
     font-size: 2rem;
-    color: #667eea;
+    color: #4a7c9b;
     margin: 15px 0;
     animation: bounce 1s infinite;
 }
@@ -419,7 +474,7 @@ h2 {
 }
 
 .avoidance-box {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #4a7c9b, #3d6a85);
     color: white;
     padding: 20px;
     border-radius: 16px;
@@ -479,18 +534,18 @@ h2 {
 }
 
 .cycle-item.evit span {
-    color: #764ba2;
+    color: #3d6a85;
     font-weight: 500;
 }
 
 .cycle-arrow {
-    color: #667eea;
+    color: #4a7c9b;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .cycle-dots {
-    color: #667eea;
+    color: #4a7c9b;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -509,7 +564,7 @@ h2 {
 
 .solution-visual h3 {
     font-size: 1.3rem;
-    color: #667eea;
+    color: #4a7c9b;
 }
 
 .tri-cards {
@@ -578,7 +633,7 @@ h2 {
 }
 
 .final-message {
-    background: linear-gradient(135deg, #667eea15, #764ba215);
+    background: linear-gradient(135deg, #4a7c9b15, #3d6a8515);
     border-radius: 16px;
     padding: 20px;
     text-align: center;
@@ -631,7 +686,7 @@ h2 {
 
 .cta-content {
     text-align: center;
-    color: white;
+    color: #537db6;
 }
 
 .cta-icon {
@@ -640,15 +695,15 @@ h2 {
 }
 
 .cta-content h2 {
-    color: white;
-    -webkit-text-fill-color: white;
+    color: #537db6;
+    -webkit-text-fill-color: #537db6;
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
 .cta-content > p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 1;
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -684,13 +739,13 @@ h2 {
 }
 
 #contato .btn-secondary {
-    border-color: white;
-    color: white;
+    border-color: #537db6;
+    color: #537db6;
 }
 
 #contato .btn-secondary:hover {
-    background: white;
-    color: #667eea;
+    background: #537db6;
+    color: #09335f;
 }
 
 /* Menu de Navegação */
@@ -754,8 +809,8 @@ h2 {
 }
 
 .nav-list li:hover {
-    background: #f8f9ff;
-    color: #667eea;
+    background: #f0f4f8;
+    color: #4a7c9b;
 }
 
 /* Responsividade */
